@@ -3,7 +3,7 @@
     "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
-    "CRS.ObjectNamePrefix": "**_",
+    "CRS.ObjectNameSuffix": "_BAPI",
     "CRS.RemovePrefixFromFilename": true,
     "al.enableCodeAnalysis": true,
     "al.codeAnalyzers": [
@@ -50,5 +50,17 @@
         "codeunit",
         "featureflags",
         "jira"
-    ]
+    ],
+
+    "rest-client.previewOption": "full",
+    "rest-client.environmentVariables": {
+        "$shared": {},
+        "sandbox":
+        {
+            "username" : "admin",
+            "password" : "getyourownpassword",
+            "baseurl" : "http://Blogging:7048/BC"
+        }
+    },
+    "al.defaultLaunchConfigurationName": "Publish to Docker :Blogging"
 }

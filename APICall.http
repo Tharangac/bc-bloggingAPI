@@ -1,0 +1,27 @@
+### Get all APIs ###
+GET {{baseurl}}/API/beta
+Authorization:Basic {{username}} {{password}}
+
+### Get all companies ###
+# @name companies
+GET {{baseurl}}/API/beta/companies
+Authorization: Basic {{username}} {{password}}
+
+### Set CompanyID ###
+@CompanyID ={{companies.response.body.value[0].id}}
+
+### Get all customers through custom API ###
+GET {{baseurl}}/API/tharangaC/blogging/beta/companies({{CompanyID}})/customers
+Authorization:Basic {{username}} {{password}}
+
+### Create a new customer through custom API ###
+POST {{baseurl}}/API/tharangaC/blogging/beta/companies({{CompanyID}})/customers
+Authorization:Basic {{username}} {{password}}
+Content-Type:  application/json
+
+{
+	"no" : "CUST-TEST-01",
+	"name" : "Test Customer 01",
+	"email" : "custtest01@outlook.com",
+	"systemId" : "a2ae3470-470c-4241-906a-675a85511368"
+}
